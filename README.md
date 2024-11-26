@@ -1,12 +1,25 @@
 # GHCN-Data-Analysis-using-Spark
-This is the 1st Assignment for the course DATA420 Scalable data and in this assignment, weather data from the Global Historical Climate Network (GHCN), a vast collection of climate summaries from land-based stations throughout the world, were examined.
+Project Title: Exploring and Analyzing Climate Data from the Global Historical Climate Network (GHCN)
+Description
+This repository contains a comprehensive analysis of climate data from the Global Historical Climate Network (GHCN). The project leverages Apache Spark for distributed computing and Tableau for visualizations to handle and interpret a vast dataset spanning over 250 years (1750–2024). The dataset includes metadata about global weather stations and daily climate summaries, comprising over 3 billion observations.
 
-The following links provided a summary of the data which were used, including all the necessary information.
-Link1: Global Historical Climatology Network (GHCN) (National Oceanic and Atmospheric Administration, n.d.) link contains all important information for the Meta Data tables Stations, Inventory, Country, and States.
-Link2: GHCN Daily (Menne, 2012) link provides all relevant information about Daily Climate Summary files.
-
-This assignment comprised three main parts. The first part involved exploring the metadata tables and performing preprocessing to create an enriched metadata table using all available tables. This step helped gain an overview of all weather stations and understand how the various tables were interconnected. Also, in this part only 1,000 rows from the daily climate were loaded and joined it with the metadata tables to get a preliminary understanding of the data structure and relationships.
-
-In the second step, the enriched metadata table created in the first phase was used to gain insights into weather stations across the globe. This phase explored the total number of stations, including active and inactive ones, the number of stations per country, and other notable facts. Given the relatively small size of the enriched metadata table, counting, and analysing the data in this step was not time or resource intensive. This allowed for efficient exploration and understanding of the distribution and status of weather stations worldwide. The final phase of the assignment involved analysing the daily data and visualizing key findings. Given that the daily data comprised approximately 250 compressed CSV files, loading and analysing them required significant time and computational resources. All daily data from the beginning was integrated with the enriched stations table, examined in accordance with the assignment's questions, and the results were recorded.
+Key Features
+Data Enrichment: Joined metadata tables, such as stations, inventory, countries, and states, to create a consolidated enriched metadata table.
+Scalable Data Analysis: Processed over 100 GB of climate data using Spark's distributed computing capabilities.
+Insights Generation:
+Explored geographical distributions of 125,983 weather stations, identifying operational and inactive stations.
+Calculated average precipitation and temperature metrics globally, with specific analyses for New Zealand.
+Detected and flagged anomalies, such as unusually high rainfall in certain regions.
+Visualizations: Created interactive time series and geographical maps using Tableau to communicate key findings effectively.
+Tools and Technologies
+Apache Spark for data preprocessing and distributed computation.
+Tableau for visualization of climate trends and anomalies.
+Python and PySpark for scripting and data transformation.
+Haversine formula to calculate distances between geographical points.
+Highlights
+The dataset's scale and complexity required advanced preprocessing, including handling compressed data and optimizing Spark configurations for efficient task execution.
+Analyzed temporal and spatial patterns in temperature and precipitation, providing insights into global and regional climate variations.
+Identified potential data quality issues in precipitation records for specific countries, prompting further investigation.
+This project demonstrates scalable data analysis techniques for large datasets, offering a roadmap for similar analyses in environmental science, meteorology, and data engineering domains.phase of the assignment involved analysing the daily data and visualizing key findings. Given that the daily data comprised approximately 250 compressed CSV files, loading and analysing them required significant time and computational resources. All daily data from the beginning was integrated with the enriched stations table, examined in accordance with the assignment's questions, and the results were recorded.
 
 All the preprocessing and analysis were conducted using the Apache Spark distributed computing framework, where the allocation of resources, creation of partitions, and task assignments for each stage were also explored. For the majority of the visualizations, Tableau software was utilized. Additionally, Python coding, grammar corrections, and other information were supported by ChatGPT (OpenAI, 2024), Stack Overflow (Stack Exchange Inc;, 2024), and Quill Bot (QuillBot, 2024).

@@ -1,5 +1,6 @@
 # GHCN-Data-Analysis-using-Spark
 Project Title: Exploring and Analyzing Climate Data from the Global Historical Climate Network (GHCN)
+
 Description
 This repository contains a comprehensive analysis of climate data from the Global Historical Climate Network (GHCN). The project leverages Apache Spark for distributed computing and Tableau for visualizations to handle and interpret a vast dataset spanning over 250 years (1750–2024). The dataset includes metadata about global weather stations and daily climate summaries, comprising over 3 billion observations.
 
